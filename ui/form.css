@@ -1,0 +1,13 @@
+.form {
+}
+
+.form__group {
+  padding-bottom: 10px;
+}
+
+.form__label {
+  display: block;
+  padding-bottom: 2px;
+  font-weight: bold;
+  color: var(--ds-gray-800);
+}

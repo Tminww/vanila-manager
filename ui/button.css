@@ -1,0 +1,37 @@
+.button {
+  display: inline-flex;
+  border: 1px solid transparent;
+  border-radius: var(--ds-radius-sm);
+  padding: 5px 10px;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+.button_info {
+  border: 1px solid var(--ds-border-primary);
+  background-color: var(--ds-button-primary-bg);
+  color: var(--ds-button-primary-text);
+}
+
+.button_secondary {
+  border: 1px solid var(--ds-border-secondary);
+  background-color: var(--ds-bg);
+  color: var(--ds-surface-secondary-invert);
+}
+
+.button_danger {
+  background-color: var(--ds-button-danger-bg);
+  color: var(--ds-button-danger-text);
+}
+.button_size_md {
+  height: var(--ds-spacing-3xl);
+}
+
+.button_hoverable:hover {
+  opacity: 0.8;
+}
+
+.button_rounded_md {
+  border-radius: var(--ds-radius-md);
+}

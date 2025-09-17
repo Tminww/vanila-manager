@@ -1,0 +1,16 @@
+.icon {
+  vertical-align: middle;
+  fill: currentColor;
+  stroke: currentColor;
+  transition: 0.3s ease;
+}
+
+.icon_size_md {
+  width: 20px;
+  height: 20px;
+}
+
+.icon_size_xxl {
+  width: 64px;
+  height: 64px;
+}

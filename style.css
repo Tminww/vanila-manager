@@ -1,0 +1,67 @@
+@import "./base.css";
+@import "./ui/button.css";
+@import "./ui/card.css";
+@import "./ui/icon.css";
+@import "./ui/dialog.css";
+@import "./ui/logo.css";
+@import "./ui/form.css";
+@import "./ui/input.css";
+
+* {
+  padding: 0;
+  margin: 0;
+}
+.layout {
+  display: grid;
+  grid-template-areas:
+    "sidebar header header"
+    "sidebar page todo";
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: auto 1fr;
+  height: 100vh;
+  overflow: hidden;
+  background-color: var(--ds-bg-secondary);
+}
+
+.header {
+  grid-area: header;
+  border-bottom: 1px solid var(--ds-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__header-logo {
+  padding: 5px 0 5px 15px;
+}
+
+.header__header-actions {
+  display: inline-flex;
+  gap: 5px;
+  padding: 5px 15px 5px 0;
+}
+.sidebar {
+  grid-area: sidebar;
+  border-right: 1px solid var(--ds-border);
+}
+.todo {
+  grid-area: todo;
+  overflow-y: scroll;
+  border-left: 1px solid var(--ds-border);
+  width: 350px;
+}
+.page {
+  grid-area: page;
+  display: grid;
+  gap: 15px;
+  overflow-y: scroll;
+  padding: 15px;
+
+  grid-template-columns: repeat(3, 1fr); /* 4 колонки равной ширины */
+  grid-template-rows: repeat(auto-fill, 350px);
+}
+
+.page__page-card {
+  height: 350px;
+  width: 100%; /* Задаем ширину на 100% от колонки */
+}

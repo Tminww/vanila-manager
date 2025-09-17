@@ -1,0 +1,19 @@
+.input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.input_textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.input_select {
+  appearance: none;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9l6 6l6-6"/></svg>')
+    no-repeat right 10px center;
+  background-size: 10px auto;
+  padding-right: 25px;
+}

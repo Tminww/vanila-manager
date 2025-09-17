@@ -1,0 +1,555 @@
+:root {
+  color-scheme: light dark;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  /* Primary Colors */
+  --ds-primary-50: #eff6ff;
+  --ds-primary-100: #dbeafe;
+  --ds-primary-200: #bfdbfe;
+  --ds-primary-300: #93c5fd;
+  --ds-primary-400: #60a5fa;
+  --ds-primary-500: #3b82f6;
+  --ds-primary-600: #2563eb;
+  --ds-primary-700: #1d4ed8;
+  --ds-primary-800: #1e40af;
+  --ds-primary-900: #1e3a8a;
+  --ds-primary-950: #172554;
+
+  /* Secondary (Gray) Colors */
+  --ds-gray-50: #f9fafb;
+  --ds-gray-100: #f3f4f6;
+  --ds-gray-200: #e5e7eb;
+  --ds-gray-300: #d1d5db;
+  --ds-gray-400: #9ca3af;
+  --ds-gray-500: #6b7280;
+  --ds-gray-600: #4b5563;
+  --ds-gray-700: #374151;
+  --ds-gray-750: #323a47;
+  --ds-gray-800: #1f2937;
+  --ds-gray-900: #111827;
+  --ds-gray-950: #030712;
+
+  /* Success Colors */
+  --ds-success-50: #f0fdf4;
+  --ds-success-100: #dcfce7;
+  --ds-success-200: #bbf7d0;
+  --ds-success-300: #86efac;
+  --ds-success-400: #4ade80;
+  --ds-success-500: #22c55e;
+  --ds-success-600: #16a34a;
+  --ds-success-700: #15803d;
+  --ds-success-800: #166534;
+  --ds-success-900: #14532d;
+  --ds-success-950: #052e16;
+
+  /* Warning Colors */
+  --ds-warning-50: #fffbeb;
+  --ds-warning-100: #fef3c7;
+  --ds-warning-200: #fde68a;
+  --ds-warning-300: #fcd34d;
+  --ds-warning-400: #fbbf24;
+  --ds-warning-500: #f59e0b;
+  --ds-warning-600: #d97706;
+  --ds-warning-700: #b45309;
+  --ds-warning-800: #92400e;
+  --ds-warning-900: #78350f;
+  --ds-warning-950: #451a03;
+
+  /* Danger Colors */
+  --ds-danger-50: #fef2f2;
+  --ds-danger-100: #fee2e2;
+  --ds-danger-200: #fecaca;
+  --ds-danger-300: #fca5a5;
+  --ds-danger-400: #f87171;
+  --ds-danger-500: #ef4444;
+  --ds-danger-600: #dc2626;
+  --ds-danger-700: #b91c1c;
+  --ds-danger-800: #991b1b;
+  --ds-danger-900: #7f1d1d;
+  --ds-danger-950: #450a0a;
+
+  /* Accent Colors */
+  --ds-accent-primary: var(--ds-primary-600);
+  --ds-accent-secondary: var(--ds-gray-600);
+
+  /* Semantic Colors using light-dark() function */
+  --ds-bg: light-dark(var(--ds-gray-50), var(--ds-gray-900));
+  --ds-bg-invert: light-dark(var(--ds-gray-900), var(--ds-gray-50));
+  --ds-bg-secondary: light-dark(var(--ds-gray-50), var(--ds-gray-800));
+  --ds-bg-secondary-invert: light-dark(var(--ds-gray-800), var(--ds-gray-50));
+
+  --ds-surface: light-dark(var(--ds-gray-50), var(--ds-gray-800));
+  --ds-surface-invert: light-dark(var(--ds-gray-800), var(--ds-gray-50));
+
+  --ds-surface-secondary: light-dark(var(--ds-gray-50), var(--ds-gray-750));
+  --ds-surface-secondary-invert: light-dark(
+    var(--ds-gray-750),
+    var(--ds-gray-50)
+  );
+
+  --ds-text-primary: light-dark(var(--ds-gray-900), var(--ds-gray-50));
+  --ds-text-secondary: light-dark(var(--ds-gray-600), var(--ds-gray-300));
+  --ds-text-tertiary: light-dark(var(--ds-gray-500), var(--ds-gray-400));
+  --ds-text-inverse: light-dark(#ffffff, var(--ds-gray-900));
+  --ds-text-accent: var(--ds-primary-600);
+
+  --ds-border: light-dark(var(--ds-gray-200), var(--ds-gray-600));
+  --ds-border-secondary: light-dark(var(--ds-gray-300), var(--ds-gray-600));
+  --ds-border-primary: light-dark(var(--ds-gray-300), var(--ds-gray-600));
+  --ds-border-accent: var(--ds-primary-600);
+  --ds-border-focus: var(--ds-primary-500);
+
+  /* Background states */
+  --ds-bg-hover: light-dark(var(--ds-gray-100), var(--ds-gray-700));
+  --ds-bg-active: light-dark(var(--ds-gray-200), var(--ds-gray-600));
+
+  /* Component-specific colors using light-dark() */
+  --ds-button-primary-bg: light-dark(
+    var(--ds-primary-600),
+    var(--ds-primary-500)
+  );
+  --ds-button-primary-bg-hover: var(--ds-primary-700);
+  --ds-button-primary-text: #ffffff;
+
+  --ds-button-secondary-bg: light-dark(#ffffff, var(--ds-gray-700));
+  --ds-button-secondary-bg-hover: light-dark(
+    var(--ds-gray-50),
+    var(--ds-gray-600)
+  );
+  --ds-button-secondary-text: light-dark(
+    var(--ds-gray-700),
+    var(--ds-gray-100)
+  );
+  --ds-button-secondary-border: light-dark(
+    var(--ds-gray-200),
+    var(--ds-gray-600)
+  );
+
+  --ds-button-success-bg: var(--ds-success-600);
+  --ds-button-success-bg-hover: var(--ds-success-700);
+  --ds-button-success-text: #ffffff;
+
+  --ds-button-warning-bg: var(--ds-warning-600);
+  --ds-button-warning-bg-hover: var(--ds-warning-700);
+  --ds-button-warning-text: #ffffff;
+
+  --ds-button-danger-bg: var(--ds-danger-600);
+  --ds-button-danger-bg-hover: var(--ds-danger-700);
+  --ds-button-danger-text: #ffffff;
+
+  /* Ghost Button Colors */
+  --ds-button-ghost-bg-hover: light-dark(
+    var(--ds-gray-100),
+    var(--ds-gray-700)
+  );
+  --ds-button-ghost-border-hover: light-dark(
+    var(--ds-gray-300),
+    var(--ds-gray-600)
+  );
+  --ds-button-ghost-bg-active: light-dark(
+    var(--ds-primary-50),
+    var(--ds-gray-600)
+  );
+  --ds-button-ghost-text-active: light-dark(
+    var(--ds-primary-600),
+    var(--ds-gray-100)
+  );
+  --ds-button-ghost-border-active: light-dark(
+    var(--ds-primary-600),
+    var(--ds-gray-500)
+  );
+
+  /* Badge Colors */
+  --ds-badge-primary-bg: light-dark(
+    var(--ds-primary-100),
+    var(--ds-primary-900)
+  );
+  --ds-badge-primary-text: light-dark(
+    var(--ds-primary-700),
+    var(--ds-primary-300)
+  );
+  --ds-badge-primary-border: light-dark(
+    var(--ds-primary-200),
+    var(--ds-primary-800)
+  );
+
+  --ds-badge-secondary-bg: light-dark(var(--ds-gray-100), var(--ds-gray-800));
+  --ds-badge-secondary-text: light-dark(var(--ds-gray-700), var(--ds-gray-300));
+  --ds-badge-secondary-border: light-dark(
+    var(--ds-gray-200),
+    var(--ds-gray-700)
+  );
+
+  --ds-badge-success-bg: light-dark(
+    var(--ds-success-100),
+    var(--ds-success-900)
+  );
+  --ds-badge-success-text: light-dark(
+    var(--ds-success-700),
+    var(--ds-success-300)
+  );
+  --ds-badge-success-border: light-dark(
+    var(--ds-success-200),
+    var(--ds-success-800)
+  );
+
+  --ds-badge-warning-bg: light-dark(
+    var(--ds-warning-100),
+    var(--ds-warning-900)
+  );
+  --ds-badge-warning-text: light-dark(
+    var(--ds-warning-700),
+    var(--ds-warning-300)
+  );
+  --ds-badge-warning-border: light-dark(
+    var(--ds-warning-200),
+    var(--ds-warning-800)
+  );
+
+  --ds-badge-danger-bg: light-dark(var(--ds-danger-100), var(--ds-danger-900));
+  --ds-badge-danger-text: light-dark(
+    var(--ds-danger-700),
+    var(--ds-danger-300)
+  );
+  --ds-badge-danger-border: light-dark(
+    var(--ds-danger-200),
+    var(--ds-danger-800)
+  );
+
+  /* Toast Colors */
+  --ds-toast-primary-bg: light-dark(var(--ds-primary-50), var(--ds-gray-800));
+  --ds-toast-primary-border: light-dark(
+    var(--ds-primary-200),
+    var(--ds-primary-700)
+  );
+
+  --ds-toast-secondary-bg: light-dark(var(--ds-gray-50), var(--ds-gray-800));
+  --ds-toast-secondary-border: light-dark(
+    var(--ds-gray-200),
+    var(--ds-gray-600)
+  );
+
+  --ds-toast-success-bg: light-dark(var(--ds-success-50), var(--ds-gray-800));
+  --ds-toast-success-border: light-dark(
+    var(--ds-success-200),
+    var(--ds-success-700)
+  );
+
+  --ds-toast-warning-bg: light-dark(var(--ds-warning-50), var(--ds-gray-800));
+  --ds-toast-warning-border: light-dark(
+    var(--ds-warning-200),
+    var(--ds-warning-700)
+  );
+
+  --ds-toast-danger-bg: light-dark(var(--ds-danger-50), var(--ds-gray-800));
+  --ds-toast-danger-border: light-dark(
+    var(--ds-danger-200),
+    var(--ds-danger-700)
+  );
+
+  /* Input Colors */
+  --ds-input-bg: light-dark(#ffffff, var(--ds-gray-800));
+  --ds-input-border: light-dark(var(--ds-gray-300), var(--ds-gray-600));
+  --ds-input-border-hover: light-dark(var(--ds-gray-400), var(--ds-gray-500));
+  --ds-input-border-focus: var(--ds-primary-500);
+  --ds-input-text: var(--ds-text-primary);
+  --ds-input-placeholder: var(--ds-text-tertiary);
+
+  /* Spacing Scale */
+  --ds-spacing-xs: 0.25rem; /* 4px */
+  --ds-spacing-sm: 0.5rem; /* 8px */
+  --ds-spacing-md: 0.75rem; /* 12px */
+  --ds-spacing-lg: 1rem; /* 16px */
+  --ds-spacing-xl: 1.25rem; /* 20px */
+  --ds-spacing-2xl: 1.5rem; /* 24px */
+  --ds-spacing-3xl: 2rem; /* 32px */
+  --ds-spacing-4xl: 2.5rem; /* 40px */
+  --ds-spacing-5xl: 3rem; /* 48px */
+
+  /* Border Radius */
+  --ds-radius-sm: 0.25rem; /* 4px */
+  --ds-radius-md: 0.5rem; /* 8px */
+  --ds-radius-lg: 0.75rem; /* 12px */
+  --ds-radius-xl: 1rem; /* 16px */
+  --ds-radius-2xl: 1.5rem; /* 24px */
+  --ds-radius-full: 9999px;
+
+  /* Shadows */
+  --ds-shadow-sm: 0 1px 2px 0
+    light-dark(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.2));
+
+  --ds-shadow-md: 0 4px 6px -1px light-dark(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.25)),
+    0 2px 4px -1px light-dark(rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.1));
+
+  --ds-shadow-lg: 0 10px 15px -3px light-dark(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.25)),
+    0 4px 6px -2px light-dark(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.1));
+
+  --ds-shadow-xl: 0 20px 25px -5px light-dark(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.25)),
+    0 10px 10px -5px light-dark(rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.1));
+
+  --ds-shadow-2xl: 0 25px 50px -12px light-dark(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.4));
+
+  --ds-tooltip-shadow: 0 0px 20px 5px
+      light-dark(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)),
+    0 10px 10px -5px light-dark(rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.1));
+
+  --ds-select-shadow: 0 10px 20px -5px light-dark(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.25)),
+    0 10px 10px -5px light-dark(rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.1));
+
+  --ds-toast-shadow: 0 0px 20px 5px
+      light-dark(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)),
+    0 10px 10px -5px light-dark(rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.1));
+
+  --ds-popover-shadow: 0 0px 20px 0px
+      light-dark(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.25)),
+    0 10px 10px 0px light-dark(rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.1));
+
+  /* Typography */
+  --ds-font-size-xs: 0.75rem; /* 12px */
+  --ds-font-size-sm: 0.875rem; /* 14px */
+  --ds-font-size-md: 1rem; /* 16px */
+  --ds-font-size-lg: 1.125rem; /* 18px */
+  --ds-font-size-xl: 1.25rem; /* 20px */
+  --ds-font-size-2xl: 1.5rem; /* 24px */
+  --ds-font-size-3xl: 1.875rem; /* 30px */
+  --ds-font-size-4xl: 2.25rem; /* 36px */
+  --ds-font-size-5xl: 3rem; /* 48px */
+
+  /* Line Heights */
+  --ds-leading-none: 1;
+  --ds-leading-tight: 1.25;
+  --ds-leading-snug: 1.375;
+  --ds-leading-normal: 1.5;
+  --ds-leading-relaxed: 1.625;
+  --ds-leading-loose: 2;
+
+  /* Font Weights */
+  --ds-font-weight-thin: 100;
+  --ds-font-weight-light: 300;
+  --ds-font-weight-normal: 400;
+  --ds-font-weight-medium: 500;
+  --ds-font-weight-semibold: 600;
+  --ds-font-weight-bold: 700;
+  --ds-font-weight-extrabold: 800;
+  --ds-font-weight-black: 900;
+
+  /* Z-index Scale */
+  --ds-z-dropdown: 1000;
+  --ds-z-sticky: 1020;
+  --ds-z-fixed: 1030;
+  --ds-z-modal-backdrop: 1040;
+  --ds-z-modal: 1050;
+  --ds-z-popover: 1060;
+  --ds-z-tooltip: 1070;
+  --ds-z-toast: 1080;
+
+  /* Transitions */
+  --ds-transition-fast: 150ms ease-in-out;
+  --ds-transition-normal: 250ms ease-in-out;
+  --ds-transition-slow: 350ms ease-in-out;
+}
+
+/* Base Styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  -moz-tab-size: 4;
+  tab-size: 4;
+  font-feature-settings: normal;
+  font-variation-settings: normal;
+}
+
+body {
+  background: var(--ds-bg);
+  color: var(--ds-text-primary);
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: var(--ds-font-size-md);
+  line-height: var(--ds-leading-normal);
+  font-weight: var(--ds-font-weight-normal);
+}
+
+/* Remove default margins */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Lists */
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Links */
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/* Buttons */
+button {
+  font-family: inherit;
+  font-size: 100%;
+  font-weight: inherit;
+  line-height: inherit;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/* Inputs */
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: 100%;
+  font-weight: inherit;
+  line-height: inherit;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+/* Images */
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  vertical-align: middle;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Tables */
+table {
+  text-indent: 0;
+  border-color: inherit;
+  border-collapse: collapse;
+}
+
+/* Focus styles */
+*:focus {
+  outline: none;
+}
+
+*:focus-visible {
+  outline: 2px solid var(--ds-border-focus);
+  outline-offset: 2px;
+  border-radius: var(--ds-radius-sm);
+}
+
+/* Scrollbars (Webkit) */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--ds-surface-secondary);
+  border-radius: var(--ds-radius-full);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--ds-border-secondary);
+  border-radius: var(--ds-radius-full);
+  border: 2px solid var(--ds-surface-secondary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ds-text-tertiary);
+}
+
+::-webkit-scrollbar-corner {
+  background: var(--ds-surface-secondary);
+}
+
+/* Text selection */
+::selection {
+  background-color: light-dark(var(--ds-primary-200), var(--ds-primary-800));
+  color: light-dark(var(--ds-primary-800), var(--ds-primary-200));
+}
+
+/* Utility Classes */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+
+/* Responsive utilities */
+/* @media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+} */
+
+/* Dark mode media query fallback for older browsers */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    color-scheme: dark;
+  }
+}
